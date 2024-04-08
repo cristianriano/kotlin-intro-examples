@@ -14,6 +14,6 @@ class ScopedFunctions {
     }
     .let { println("Initialized") }
 
-  
+
 }
 
