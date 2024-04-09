@@ -27,3 +27,14 @@ class DefaultProcessor(private val repo: Repository, private val notifier: Notif
 
 inline fun <T, R> Result<T>.flatMap(f: (T) -> Result<R>): Result<R> =
   fold(onSuccess = { f(it) }, onFailure = { Result.failure(it) })
+
+class HttpRepository: Repository {
+  override fun fetch(id: OrderId): Result<Order> = runCatching {
+    // Perform HTTP request and other operations that may throw exceptions
+    TODO()
+  }
+
+  override fun update(order: Order, id: ProductId): Result<Order> {
+    TODO("Not yet implemented")
+  }
+}

@@ -13,7 +13,5 @@ class ScopedFunctions {
       this.baz = 1
     }
     .let { println("Initialized") }
-
-
 }
 
